@@ -13,8 +13,8 @@ public class Dog {
     private int dogAge;
     private int dogWeight;
 
-    //setters for properties
-    public void setDogName (String name) {
+/*    //setters for properties
+    public void setDogName (String name) { // old setter methods
         dogName = name;
     }
     public void setDogAge (int age) {
@@ -22,6 +22,15 @@ public class Dog {
     }
     public void setDogWeight (int weight) {
         dogWeight = weight;
+    }*/
+
+    //The other homework for today is to refactor your PetShop code to use constructors in the animal classes and
+    // the this. keyword in your setters.
+    // Bonus point if you find a way to do some string handling fun stuff too
+    public Dog(String dogName, int dogAge, int dogWeight) { // new constructor set method
+        this.dogName = dogName;
+        this.dogAge = dogAge;
+        this.dogWeight = dogWeight;
     }
 
     //getters for properties

@@ -12,7 +12,7 @@ public class Cat {
     private int catAge;
     private int catWeight;
 
-    //setters for properties
+ /*   //setters for properties
     public void setCatName (String name) {
         catName = name;
     }
@@ -21,6 +21,12 @@ public class Cat {
     }
     public void setCatWeight (int weight) {
         catWeight = weight;
+    }*/
+    //setters for properties using constructor and this. keyword
+    public Cat(String catName, int catAge, int catWeight) {
+        this.catAge = catAge;
+        this.catName = catName;
+        this.catWeight = catWeight;
     }
 
     //getters for properties
