@@ -13,6 +13,8 @@ public class PetShop {
 //Bonus: Ask the user to pick the name of the animal that they want to purchase and check if that is one of the
     // 4 animal’s names. Tell the user whether the name is not a valid choice.
     // Add another pet class named guinea pig
+    //add other inputs that makes adoption just one option, donate to add to class?
+    //
 
     public static void main(String[] args) {
         // create two instances of each animal type
@@ -22,6 +24,7 @@ public class PetShop {
         Cat myCat2 = new Cat("Luna", 1,8);
         GuineaPig myGuinea1 = new GuineaPig("Bruno",1, 2);
         GuineaPig myGuinea2 = new GuineaPig("Angel",4, 50);
+        PetScanner scanner = new PetScanner("Test",10,10); //has Scanner inputs why are parameters requested?
 
 /*        myDog1.setDogAge(1); //old method of calling dog and cat objects, not required with parameters now
         myDog1.setDogName("Fluffy");
@@ -49,10 +52,12 @@ public class PetShop {
                 myDog2.getDogWeight() + " pounds." + '\n' + "A guinea pig named " + myGuinea1.getGpName() +". He is " +
                 myGuinea1.getGpAge() + "years old and weighs " + myGuinea1.getGpWeight() + " pounds." + '\n' +
                 "A guinea pig named " + myGuinea2.getGpName() + ". She is " + myGuinea2.getGpAge() + " years old and " +
-                "weighs " + myGuinea2.getGpWeight() + " pounds.");
+                "weighs " + myGuinea2.getGpWeight() + " pounds." + '\n' + scanner.getPetName() + scanner.getPetAge() +
+                scanner.getPetWeight());
 
 
         //Bonus: create a scanner that asks which they would like
+        //bonus2: create an option that user can choose to adopt or donate - IN PROGRESS
         Scanner userInput = new Scanner(System.in);
         System.out.println("Which animal would you like to adopt today?");
         String selection = userInput.next();
@@ -61,7 +66,8 @@ public class PetShop {
         while(keepAsking == true) {
             if(selection.equals(myCat1.getCatName()) || selection.equals(myCat2.getCatName()) ||
                     selection.equals(myDog1.getDogName()) || selection.equals(myDog2.getDogName()) ||
-                    selection.equals(myGuinea1.getGpName()) || selection.equals(myGuinea2.getGpName())) {
+                    selection.equals(myGuinea1.getGpName()) || selection.equals(myGuinea2.getGpName()) ||
+                    selection.equals(scanner.getPetName())) {
                 System.out.println("Congrats on making a new furry friend!");
                 keepAsking = false;
             } else {
